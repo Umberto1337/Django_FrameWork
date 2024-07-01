@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Загрузка фотографии продукта{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Загрузка фотографии продукта</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </form>
+</div>
+{% endblock %}
